@@ -1,6 +1,8 @@
 [submodule "poky"]
 	path = poky
-	url = https://github.com/lgirdk/poky.git
-[submodule "meta-openembedded"]
+	url = git://git.yoctoproject.org/poky
+	branch = kirkstone
+[submodule "poky/meta-openembedded"]
 	path = poky/meta-openembedded
-	url = git://github.com/openembedded/meta-openembedded.git
+	url = git://git.openembedded.org/meta-openembedded
+	branch = kirkstone
