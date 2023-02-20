@@ -15,8 +15,14 @@ install() {
 }
 
 init() {
+  git clone git://git.yoctoproject.org/poky poky -b kirkstone
+  git clone git://git.openembedded.org/meta-openembedded poky/meta-openembedded -b kirkstone
+  git clone http://github.com/roslynos/meta-stm32mp15x.git meta-stm32mp15x -b kirkstone
+  
   _source
+
   bitbake-layers add-layer ../poky/meta-openembedded/meta-oe/
+  bitbake-layers add-layer ../meta-stm32mp15x/
 }
 
 bake() {
@@ -28,7 +34,7 @@ _source() {
   source ./poky/oe-init-build-env $BUILD_DIR
 }
 
-f [[ $# -eq 0 ]] ; then
+if [[ $# -eq 0 ]] ; then
   bake
 fi
 

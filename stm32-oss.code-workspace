@@ -8,5 +8,32 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"editor.rulers": [
+			120
+		],
+		"extensions.ignoreRecommendations": true,
+		"files.watcherExclude": {
+			"**/.repo": true,
+			"**/cache": true,
+			"**/downloads": true,
+			"**/meta*": true,
+			"**/poky": true,
+			"**/source": true,
+			"**/buildhistory": true,
+			"**/sstate-cache": true,
+			"**/tmp": true,
+			"**/tmp-glibc": true
+		},
+		"files.exclude": {
+			"**/.repo": true,
+			"**/cache": true,
+			"**/downloads": true,
+			"**/buildhistory": true,
+			"**/sstate-cache": true
+		},
+		"git.ignoredRepositories": [
+			"./poky"
+		]
+	}
 }
