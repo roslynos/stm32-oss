@@ -1,0 +1,6 @@
+[submodule "poky"]
+	path = poky
+	url = https://github.com/lgirdk/poky.git
+[submodule "meta-openembedded"]
+	path = poky/meta-openembedded
+	url = git://github.com/openembedded/meta-openembedded.git

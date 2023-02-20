@@ -1,0 +1,6 @@
+poky
+
+build/*
+!build/conf
+build/conf/*
+!build/conf/local.conf
