@@ -25,14 +25,14 @@ git clone https://github.com/roslynos/stm32-oss.git
 
 Before you continue to Build, make sure you're in the roslyn directory:
 ```bash
-$ cd stm32-oss
-$ ./run-build.sh install
-$ ./run-build.sh init
+cd stm32-oss
+./run-build.sh install
+./run-build.sh init
 ```
 
 Build RoslynOS
 ```bash
-$ ./run-build.sh
+./run-build.sh
 ```
 
 ## Using minicom command to connect via console
