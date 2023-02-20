@@ -20,7 +20,14 @@ git config --global user.name "Your Name"
 Clone the main repository using the following command:
 
 ```bash
-git clone https://github.com/roslyn-build/roslyn.git --recursive
+git clone https://github.com/roslynos/stm32-oss.git
+```
+
+Before you continue to Build, make sure you're in the roslyn directory:
+```bash
+$ cd stm32-oss
+$ ./run-build.sh install
+$ ./run-build.sh init
 ```
 
 Build RoslynOS
@@ -28,7 +35,7 @@ Build RoslynOS
 $ ./run-build.sh
 ```
 
-# Using screen command to connect via console
+## Using minicom command to connect via console
 ```bash
 sudo minicom -D /dev/ttyUSB0 115200
 ```
