@@ -8,19 +8,13 @@ inherit core-image
 # Setup default user and passwords
 inherit roslynos-users
 
+# Set default timezone
+DEFAULT_TIMEZONE = "America/Los_Angeles"
+
 # Specifies the list of locales to install into the image
 LINGUAS_EN_GB = "en-gb en-gb.iso-8859-1"
 LINGUAS_EN_US = "en-us en-us.iso-8859-1"
 IMAGE_LINGUAS = "${LINGUAS_EN_GB} ${LINGUAS_EN_US}"
-
-# Do a quiet boot with limited console messages
-# APPEND += "rootfstype=ext4 quiet"
-# AUTO_SYSLINUXMENU = "0"
-# SYSLINUX_PROMPT ?= "0"
-# SYSLINUX_TIMEOUT ?= "0"
-
-# Adds 4GB extra free space to the root filesystem
-IMAGE_ROOTFS_EXTRA_SPACE = "4194304"
 
 # Additional application configuration
 CORE_IMAGE_EXTRA_INSTALL += "\

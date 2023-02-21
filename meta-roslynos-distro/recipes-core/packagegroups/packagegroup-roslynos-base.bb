@@ -24,6 +24,7 @@ RDEPENDS:${PN} = " \
 
 RDEPENDS:packagegroup-roslynos-core = "\
 	iptables \
+	curl \
 	nano \
 	htop \
 	sudo"
@@ -33,7 +34,6 @@ RDEPENDS:packagegroup-base-ap = "\
 	hostapd"
 
 RDEPENDS:packagegroup-base-dotnet = "\
-	vsdbg \
 	dotnet-sdk \
 	dotnet-sdk-dev \
 	dotnet-sdk-dbg \

@@ -29,7 +29,7 @@ init() {
 
 bake() {
   _source
-  bitbake stm32-image-minimal
+  bitbake stm32mp-image
 }
 
 flash() {
@@ -39,7 +39,7 @@ flash() {
 
   oe-run-native \
       bmap-tools-native bmaptool copy \
-      ./tmp/deploy/images/stm32mp157f-dk2/stm32-image-minimal-stm32mp157f-dk2.wic.gz \
+      ./tmp/deploy/images/stm32mp157f-dk2/stm32mp-image-stm32mp157f-dk2.wic.gz \
       /dev/sdb
 
   udisksctl power-off -b /dev/sdb
@@ -52,13 +52,13 @@ update() {
 packages() {
   _source
 
-  bitbake -g stm32-image-minimal
+  bitbake -g stm32mp-image
   cat pn-buildlist | grep -v native | sort
 }
 
 clean() {
   _source
-  bitbake stm32-image-minimal-c clean
+  bitbake stm32mp-image -c clean
 }
 
 _source() {

@@ -13,7 +13,6 @@ SRC_URI = "https://vsdebugger.azureedge.net/vsdbg-17-4-11209-2/vsdbg-linux-arm.t
 
 COMPATIBLE_HOST ?= "(arm).*-linux"
 
-
 INHIBIT_PACKAGE_STRIP = "1"
 INHIBIT_PACKAGE_DEBUG_SPLIT = '1' 
 
