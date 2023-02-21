@@ -34,9 +34,10 @@ RDEPENDS:packagegroup-base-ap = "\
 	hostapd"
 
 RDEPENDS:packagegroup-base-dotnet = "\
-	dotnet-sdk \
-	dotnet-sdk-dev \
-	dotnet-sdk-dbg \
+	vsdbg \
+	dotnet-sdk-6.0 \
+	dotnet-sdk-6.0-dev \
+	dotnet-sdk-6.0-dbg \
 	ldd \
 	procps"
 

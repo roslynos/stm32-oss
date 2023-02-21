@@ -5,19 +5,9 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
-# DOTNET_FETCH_ID = "72ec0dc2-f425-48c3-97f1-dc83740ba400/78e8fa01fa9987834fa01c19a23dd2e7"
+DOTNET_FETCH_ID = "43b25a51-637e-492a-a0b9-9cd406f843ce/fda51e8b6a57bfc372e4a62ce3185d6e"
 
-# SRC_URI[sha256sum] = "3e19e27c3a82fbd2f8513c8f2ada3f7e1fc64fe266125c8ce5b7b1ce7db7676e"
-# SRC_URI = " \
-#     https://download.visualstudio.microsoft.com/download/pr/${DOTNET_FETCH_ID}/dotnet-sdk-${PV}-linux-arm64.tar.gz;unpack=0 \
-#     file://dotnet-sdk.sh \
-# "
-
-# COMPATIBLE_HOST ?= "(aarch64).*-linux"
-
-DOTNET_FETCH_ID = "54b057ec-36ef-4808-a436-50ee3fa39a44/87d696a761176b721daaf8ab9761c9c8"
-
-SRC_URI[sha256sum] = "c8bb3651d51a0044321e4a25771d2152c5c6f70fa0009cd65d27913f3b64d670"
+SRC_URI[sha256sum] = "74ca8771792c98e757a73e042a1706a432b68dd92db27b096c22f32f3c392275"
 SRC_URI = " \
     https://download.visualstudio.microsoft.com/download/pr/${DOTNET_FETCH_ID}/dotnet-sdk-${PV}-linux-arm.tar.gz;unpack=0 \
     file://dotnet-sdk.sh \
