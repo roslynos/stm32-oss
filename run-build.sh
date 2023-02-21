@@ -22,12 +22,43 @@ init() {
   _source
 
   bitbake-layers add-layer ../poky/meta-openembedded/meta-oe/
+  bitbake-layers add-layer ../meta-roslynos-distro/
   bitbake-layers add-layer ../meta-stm32mp15x/
+  bitbake-layers add-layer ../meta-stm32-oss/
 }
 
 bake() {
   _source
-  bitbake core-image-minimal
+  bitbake stm32-image-minimal
+}
+
+flash() {
+  _source
+  bitbake bmap-tools-native -caddto_recipe_sysroot
+  sudo chmod 666 /dev/sdb
+
+  oe-run-native \
+      bmap-tools-native bmaptool copy \
+      ./tmp/deploy/images/stm32mp157f-dk2/stm32-image-minimal-stm32mp157f-dk2.wic.gz \
+      /dev/sdb
+
+  udisksctl power-off -b /dev/sdb
+}
+
+update() {
+  git fetch --all
+}
+
+packages() {
+  _source
+
+  bitbake -g stm32-image-minimal
+  cat pn-buildlist | grep -v native | sort
+}
+
+clean() {
+  _source
+  bitbake stm32-image-minimal-c clean
 }
 
 _source() {
@@ -50,5 +81,21 @@ case $1 in
   bake)
     shift
     bake "$@"
+    ;;
+  flash)
+    shift
+    flash "$@"
+    ;;
+  clean)
+    shift
+    clean "$@"
+    ;;
+  update)
+    shift
+    update "$@"
+    ;;
+  packages)
+    shift
+    packages "$@"
     ;;
 esac
