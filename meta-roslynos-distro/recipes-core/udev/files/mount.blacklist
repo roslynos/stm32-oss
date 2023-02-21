@@ -1,0 +1,11 @@
+/dev/loop
+/dev/ram
+/dev/mtdblock
+/dev/md
+/dev/dm-*
+/dev/mmcblk0p2
+/dev/mmcblk0p3
+/dev/mmcblk1p2
+/dev/mmcblk1p3
+/dev/mmcblk0p4
+/dev/mmcblk0p5

@@ -1,0 +1,6 @@
+# /etc/systemd/network/ap-wlan0.network
+[Match]
+Name=eth*
+
+[Network]
+DHCP=both

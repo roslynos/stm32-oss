@@ -1,0 +1,6 @@
+# /etc/systemd/network/wlan.network 
+[Match]
+Name=wlan*
+
+[Network]
+DHCP=both

@@ -1,0 +1,1 @@
+KERNEL=="spidev*", SUBSYSTEM=="spidev", GROUP="spi", MODE="0660"
