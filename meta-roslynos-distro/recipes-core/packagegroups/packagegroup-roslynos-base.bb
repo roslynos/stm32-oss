@@ -23,11 +23,11 @@ RDEPENDS:${PN} = " \
 "
 
 RDEPENDS:packagegroup-roslynos-core = "\
+	libdrm-dev \
 	iptables \
-	curl \
+	sudo \
 	nano \
-	htop \
-	sudo"
+	wget"
 
 RDEPENDS:packagegroup-base-ap = "\
 	iw \

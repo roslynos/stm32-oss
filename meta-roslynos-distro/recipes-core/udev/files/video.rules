@@ -1,0 +1,2 @@
+KERNEL=="fb[0-1]*", GROUP="video", MODE="0666"
+KERNEL=="card[0-9]*", GROUP="video", MODE="0666"

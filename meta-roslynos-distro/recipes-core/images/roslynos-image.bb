@@ -22,10 +22,9 @@ CORE_IMAGE_EXTRA_INSTALL += "\
     udev-rules-gpio \
     udev-rules-i2c \
     udev-rules-spi \
+    udev-rules-video \
     packagegroup-roslynos-base \
 "
-
-PACKAGE_EXCLUDE += "perl"
 
 # perform some changes to the rootfs
 rootfs_postprocess() {
