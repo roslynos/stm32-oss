@@ -23,7 +23,6 @@ RDEPENDS:${PN} = " \
 "
 
 RDEPENDS:packagegroup-roslynos-core = "\
-	libdrm-dev \
 	iptables \
 	sudo \
 	nano \
